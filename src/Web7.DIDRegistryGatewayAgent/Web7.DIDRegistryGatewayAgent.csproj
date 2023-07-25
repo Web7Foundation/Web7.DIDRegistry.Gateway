@@ -1,0 +1,46 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net6.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="resources\DIDDocument-sample1.json" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.Extensions.ObjectPool" Version="7.0.9" />
+    <PackageReference Include="Microsoft.IdentityModel.JsonWebTokens" Version="6.32.0" />
+    <PackageReference Include="Microsoft.IdentityModel.Tokens" Version="6.32.0" />
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="Trinity.Core">
+      <HintPath>..\..\..\Web7.TrustLibrary\releaselibs\Trinity.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Web7.TrustLibrary.Base">
+      <HintPath>..\..\..\Web7.TrustLibrary\releaselibs\Web7.TrustLibrary.Base.dll</HintPath>
+    </Reference>
+    <Reference Include="Web7.TrustLibrary.Did">
+      <HintPath>..\..\..\Web7.TrustLibrary\releaselibs\Web7.TrustLibrary.Did.dll</HintPath>
+    </Reference>
+    <Reference Include="Web7.TrustLibrary.NBitcoin.BIP39">
+      <HintPath>..\..\..\Web7.TrustLibrary\releaselibs\Web7.TrustLibrary.NBitcoin.BIP39.dll</HintPath>
+    </Reference>
+    <Reference Include="Web7.TrustLibrary.Registries">
+      <HintPath>..\..\..\Web7.TrustLibrary\releaselibs\Web7.TrustLibrary.Registries.dll</HintPath>
+    </Reference>
+    <Reference Include="Web7.TrustLibrary.Transports">
+      <HintPath>..\..\..\Web7.TrustLibrary\releaselibs\Web7.TrustLibrary.Transports.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="resources\DIDDocument-sample1.json" />
+  </ItemGroup>
+
+</Project>
